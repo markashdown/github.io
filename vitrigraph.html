@@ -1,0 +1,178 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Mark Ashdown - Vitrigraph</title>
+<link rel="stylesheet" type="text/css" href="general/ashdown.css"/>
+<link rel="start" title="Home page" type="text/html" href="index.html"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-language" content="en"/>
+</head>
+
+<body>
+
+<!-- Header start -->
+<table class="header">
+<tr><td>
+  <div class="header">
+  <p>
+    <img class="portrait" src="general/2008-NatHistMuseum.jpg" alt="Mark Ashdown" width="250" height="182"/>
+    <img class="qrcode" src="general/qrcode-ashdown.me-blue.png" alt="QR Code - scan with phone" width="115" height="115"/>    
+  </p>
+  <h1>Mark Ashdown</h1>
+
+    
+  </div>
+</td></tr>
+</table>
+<!-- Header end -->
+
+
+<!-- Menu start -->
+<div class="navbar">
+<a href="index.html">About</a>
+<a href="research.html" id="thisPage">Research</a>
+<a href="publications.html">Publications</a>
+<a href="software.html">Software</a>
+<a href="contact.html">Contact</a>
+</div>
+<!-- Menu end -->
+
+<div class="content">
+<h1>Research: Vitrigraph</h1>
+
+<p>
+<b>Please note:</b>
+The Vitrigraph program is not available to download because
+it is not in a state suitable for release to the public. If you
+would like to take the Java source code and improve the program
+then email me.
+</p>
+
+<p>
+Vitrigraph was created as the third-year project for the B.A. Hons Computer
+Science from the University of Cambridge.  The aim of the project was to create
+an application program that can be used to design stained glass windows.  The
+emphasis was on features that assist the physical realisation and financial
+evaluation of the designs. An extension was implemented to create ray-traced
+pictures. These allow a design to be evaluated aesthetically, prior to
+construction. The program has achieved the aims of the project. It provides a
+simple interface for the non-technical user, to design a detailed window with
+intuitive manipulation of graphical objects. The novel underlying data
+structure provides support for algorithms that detect design faults, calculate
+the production cost based on raw materials and complexity, and produce pleasing
+and realistic ray-traced images.  
+</p>
+
+<p class="whitebox">
+A design for a stained glass window is stored with a modified version of
+the winged-edge data structure, that has not only straight edges but three
+other types: quadratic and cubic Beziers, and arcs.
+<br/>
+<img class="iconleft" alt="Data Structure Edges" 
+ src="research/VitrigraphEdges.gif"/>
+</p>
+
+<p class="whitebox">
+A screenshot of Vitrigraph being used to create a simple window design.
+Edges are created, vertices are dragged around, and
+the facets are filled with various types of glass.
+<br/>
+<img class="iconleft" alt="Vitrigraph Screenshot" 
+ src="research/VitrigraphScreenshot.gif"/>
+</p>
+
+<p class="whitebox">
+The ray-tracer output for a complex design. This style of output, 
+called 'sunbeam', provides
+a compelling depiction of the design to present to a customer.
+<br/>
+<img class="iconleft" alt="Example Stained Glass Window" 
+ src="research/VitrigraphBiggie.jpg"/>
+</p>
+
+<p>
+Listed below are the achievement criteria for the Vitrigraph
+application, with explanations of how they were met
+</p>
+
+<table class="whitetable" cellspacing="0">
+<tr>
+  <th>The user must be able to create a stained glass pattern using 
+  simple constructs that are combined graphically.</th>
+  <td>Manipulation of patterns is simple and straightforward. 
+  Optimisations have ensured the interactive user interface remains 
+  responsive even for large, complex patterns.</td>
+</tr>
+<tr>
+  <th>The graphical representation of the pattern should relate 
+  directly to the intended physical design, and incorporate 
+  information such as the type of each piece of lead and glass.</th>
+  <td>This is the case. The Java routines used to create the 
+  printouts are also used to draw the pattern on the screen, 
+  so what you see is what you get.</td>
+</tr>
+<tr>
+  <th>It must be possible to load and save designs from and to files.</th>
+  <td>This facility has been included and tested.</td>
+</tr>
+<tr>
+  <th>It must be possible to produce printouts of the whole pattern 
+  or parts of it, from which the stained glass window can be 
+  constructed.</th>
+  <td>This facility has been included and tested. It provides an 
+  accurate method for cutting the glass facets.
+  Individual facets can be printed on a small-format printer, or 
+  the whole life-sized pattern can be printed on a large-format 
+  printer and used as a template for assembly.</td>
+</tr>
+<tr>
+  <th>Financial evaluation routines should compute the cost of 
+  producing the window. The routines should give an accurate costing 
+  for patterns of varying size and complexity.</th>
+  <td>The evaluation routines give quite accurate cost analyses for 
+  the test patterns. 
+  These can be used as a guide to pricing, but the price of a 
+  stained glass window should ultimately be set by an expert:
+  there are many factors that affect the difficulty of constructing 
+  a particular pattern: some types of glass may be harder 
+  to cut than others, certain window shapes will be more difficult 
+  to achieve, and the craftsman will be more efficient at constructing 
+  a pattern in a style with which he is familiar.</td>
+</tr>
+<tr>
+  <th>The program must be able to present the pattern in a form 
+  that makes it easy to visualise the finished product. Aesthetic 
+  evaluation must be possible.</th>
+  <td>The ray-tracer translation system allows patterns to be 
+  assessed aesthetically by people with no experience in stained 
+  glass or computing.</td>
+</tr>
+</table>
+
+<p>
+  For more information on Vitrigraph see my list of publications.
+</p>
+
+</div>
+
+<!-- Footer start -->
+<div class="footer">
+  <p>By <a href="http://www.ashdown.me/">Mark Ashdown</a>. Updated 31 Mar 2013</p>
+</div>
+<!-- Footer end -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12092892-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

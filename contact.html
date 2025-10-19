@@ -1,0 +1,156 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Mark Ashdown - Contact</title>
+<link rel="stylesheet" type="text/css" href="general/ashdown.css"/>
+<link rel="start" title="Home page" type="text/html" href="index.html"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<meta http-equiv="Content-language" content="en"/>
+
+<!-- Google Maps -->
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAA3scI7YMF6rOGrZQ4o1svtBTLtLmIBiWJ4Gjp3MdEzDSmXY8CwBQIJOj3z80wnn13SCAQ14BJ_RoBdA" type="text/javascript"></script>
+<script type="text/javascript">
+
+    function initialize() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("map_canvas"));
+        map.setCenter(new GLatLng(51.495238,-0.146663), 15);
+        //map.setUIToDefault();
+        //map.addControl(new GMapTypeControl());
+        //map.addControl(new GLargeMapControl());
+        map.enableScrollWheelZoom();
+        map.enableContinuousZoom();  
+
+
+        // Add marker for Thales
+        //map.addOverlay(createMarker(51.423047,-0.973456, "Thales Research and Technology"));
+		// Add marker for Google London.
+		map.addOverlay(createMarker(51.495238,-0.146663, "Google London"));
+      }
+      
+      // Creates a marker whose info window displays the letter corresponding
+      // to the given index.
+      function createMarker(lat, lon, name) {
+        var point = new GLatLng(lat,lon);
+
+         // Set up our GMarkerOptions object
+        var marker = new GMarker(point);
+
+        // The label is disabled for the moment, because there's a layout bug in Google Maps
+        //GEvent.addListener(marker, "click", function() {
+        //  marker.openInfoWindowHtml(name);
+        //});
+        
+        return marker;
+      }
+
+    }
+</script>
+
+</head>
+
+<body onload="initialize()" onunload="GUnload()">
+
+<!-- Header start -->
+<table class="header">
+<tr><td>
+  <div class="header">
+  <p>
+    <img class="portrait" src="general/2008-NatHistMuseum.jpg" alt="Mark Ashdown" width="250" height="182"/>
+    <img class="qrcode" src="general/qrcode-ashdown.me-blue.png" alt="QR Code - scan with phone" width="115" height="115"/>    
+  </p>
+  <h1>Mark Ashdown</h1>
+
+    
+  </div>
+</td></tr>
+</table>
+<!-- Header end -->
+
+
+<!-- Menu start -->
+<div class="navbar">
+<a href="index.html">About</a>
+<a href="research.html">Research</a>
+<a href="publications.html">Publications</a>
+<a href="software.html">Software</a>
+<a href="contact.html" id="thisPage">Contact</a>
+</div>
+<!-- Menu end -->
+
+<!--
+<div class="columns">
+
+<div class="column">
+-->
+<div class="content">
+
+<h1>Contact Details</h1>
+
+<h2>Networking</h2>
+
+<p>
+  <!-- LinkedIn -->
+    <a class="plain" href="http://www.linkedin.com/in/ashdown" ><img class="plain" src="general/linkedin.png" alt="LinkedIn" style="border:0;width:32px;height:32px;"/></a>
+
+  &nbsp;&nbsp;&nbsp;
+  
+  <!-- Google+ -->
+  <!--
+  <a href="https://plus.google.com/114026041443666340448?prsrc=3" rel="author" style="text-decoration:none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" style="border:0;width:32px;height:32px;"/></a>
+  -->
+</p>
+
+
+<h2>Address</h2>
+
+<p>
+  Mark Ashdown<br/>
+  XTX Markets<br/>
+  R7 Building<br/>
+  14 - 18 Handyside Street<br/>
+  London
+  N1C 4DN<br/>
+  United Kingdom<br/>
+  &nbsp;<br/>
+  e-mail: <img class="email" alt="" src="general/email6.png" width="142" height="17"/><br/>
+</p>   
+
+
+<!--
+</div>
+
+<div class="column">
+-->
+</div>
+
+<!-- Google Maps -->
+<!--
+<div id="map_canvas" style="width: 500px; height: 500px;">
+</div>
+</div>
+
+</div>
+-->
+
+<!-- Footer start -->
+<div class="footer">
+  <p>By <a href="http://www.ashdown.me/">Mark Ashdown</a>. Updated 1 Feb 2021</p>
+</div>
+<!-- Footer end -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12092892-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# robots.txt file for http://www.mark.ashdown.name/
+# Mark Ashdown
+# Created: 14 July 03
+# Modified 12 Jun 04
+
+User-agent: *
+Disallow: /webstat/
+Disallow: /download/
+Disallow: /cv/
+Disallow: /private/

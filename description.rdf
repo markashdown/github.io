@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+	  xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	  
+  <rdf:Description rdf:about="http://www.mark.ashdown.name/index.html">
+	<dc:creator rdf:nodeID="msda"/>
+    <dc:language>en</dc:language>
+  </rdf:Description>
+
+  <foaf:PersonalProfileDocument rdf:about="">
+    <foaf:maker rdf:nodeID="msda"/>
+	<foaf:primaryTopic rdf:nodeID="msda"/>
+  </foaf:PersonalProfileDocument>
+  
+  <foaf:Person rdf:nodeID="msda">
+    <foaf:name>Mark Ashdown</foaf:name>
+    <foaf:title>Dr</foaf:title>
+    <foaf:givenname>Mark</foaf:givenname>
+    <foaf:family_name>Ashdown</foaf:family_name>
+    <foaf:homepage rdf:resource="http://www.mark.ashdown.name"/>
+    <foaf:depiction rdf:resource="http://www.mark.ashdown.name/general/msda-hatsumoude.jpg"/>
+  </foaf:Person>
+
+</rdf:RDF>
