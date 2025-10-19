@@ -1,0 +1,576 @@
+/* CCS style for my web site */
+/* Mark Ashdown              */
+/* June 2001                 */
+
+/* Don't use padding-bottom because it makes Netscape 4 go haywire */
+
+BODY
+{
+    font-size: medium;
+    /* margin: 1em 5em 2em; */
+	margin: 0;
+	margin-bottom: 1em;
+    color: black;
+    font-family: sans-serif;
+    background-color: white;
+
+    /*background-color: lavender;*/
+    /*background-image: url(background.gif);*/  /* This URL is relative to the CSS file */
+	/*background: url('bg-swoosh.svg') #fff;  backgrounds like this are currently broken in Chrome, so disable it. */
+	background: #fff;
+	background-size:100%; 
+}
+BODY.private
+{
+	background-color: #FFFFCC;
+	color: black;
+}
+/* Headings */
+H1, H2, H3
+{
+    font-weight: bold;
+    font-family: sans-serif;
+    clear: both; /* Don't let floats overlap section headings. */
+}
+H1 { font-size: 2em   }
+H2 { font-size: 1.5em }
+H3
+{
+    display: inline;
+    font-size: 1.2em
+}
+/* Horizontal rule */
+HR
+{
+    color: black;
+    background-color: black;
+    border: 1px solid black;
+    width: 100%;
+    height: 2px;
+    clear: both;
+}
+HR.small
+{
+    color: black;
+    background-color: black;
+    border: 1px solid black;
+    width: 50%;
+    height: 1px;
+    clear: both;
+}
+
+
+/* Anchors */
+A
+{
+    border: 0;
+    text-decoration: none;
+}
+A:link
+{
+    background-color: transparent;
+/*    background-color: snow; */
+    color: blue;
+}
+A:visited
+{
+    background-color: transparent;
+/*    background-color: snow; */
+    /* More subtle purple than the standard one. */
+    color: #50A;
+}
+A:link:hover
+{
+    color: #00A;
+    background-color: #CCF;
+}
+A:visited:hover
+{
+    color: #409;
+    background-color: #CCF;
+}
+.plain
+{
+    border: 0;
+}
+
+
+IMG.iconright
+{
+    border: 0;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+    vertical-align: text-top;
+}
+IMG.iconleft
+{
+    padding: 0;
+    border: 0;
+    margin-left: 0px;
+    margin-right: 10px;
+    float: none;
+    vertical-align: text-top;
+}
+IMG.smalliconleft
+{
+    padding: 0;
+    border: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    margin-right: 10px;
+    float: none;
+    vertical-align: middle;
+}
+IMG.portrait
+{
+    /* border: black 3px solid; */
+    border: black 1px solid;
+    margin-left: 0px;
+    margin-right: 10px;
+	margin-bottom: 1em;
+	float: left;
+}
+IMG.photo
+{
+    border: black 1px solid;
+    margin-left: 0px;
+    margin-right: 10px;
+	margin-bottom: 1em;
+	float: left;
+}
+IMG.email
+{
+	vertical-align:top;
+}
+IMG.qrcode
+{
+  border: 0px;
+  float: right;
+}
+
+P,UL,OL
+{
+    text-align: justify;
+    max-width: 50em;
+}
+P.centred
+{
+    text-align: center;
+}
+P.left
+{
+    text-align: left;
+}
+P.publication
+{
+  background-color: #DDD;
+  color: black;
+  
+  background: rgba(185, 185, 185, 0.25);
+  
+  /* Alpha value for background. */
+  /*opacity: 0.5;*/
+  /* For IE. */
+  /*filter: alpha(opacity=50);*/
+  /* For old Mozilla. */
+  /*-moz-opacity:0.5;*/
+  
+  padding: 4px;
+}
+P.publication OBJECT
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+/* Inserts a 4-character horizontal space in the text. */
+SPAN.quad
+{
+	margin-left: 4em;
+}
+DIV.personal-info
+{
+	margin: 0;
+	padding: 0;
+}
+DIV.personal-info P
+{
+	clear:left;
+}
+DIV.personal-info UL
+{
+	/* ULs next to Img.photo elements weren't working properly -
+	   they sank to the left, into the images. I found that these
+	   Two lines together fix the problem in Firefox and IE, but I'm
+	   not sure exactly why. */
+	margin-left: 5em;
+	padding-left: 5em;
+}
+TABLE
+{
+    font-size: 1em;
+    margin: 0;
+	border: 0;
+}
+
+/* Vertical align to top */
+TD.top
+{
+    vertical-align: top;
+}
+
+TABLE.personal
+{
+    vertical-align: top;
+    text-align: justify;
+}
+TABLE.personal TH
+{
+	width: 120px;			/* the width of one of the images. */
+}
+TABLE.personal TD
+{
+    vertical-align: top;
+    text-align: justify;
+}
+
+
+TABLE.bikeride TD,
+TABLE.bikeride TH
+{
+    text-align: left;
+}
+
+/* Chart of supervision times */
+TABLE.chart
+{
+    border-left: gray 1px solid;    
+    border-top: gray 1px solid;    
+    border-right: 0;
+    border-bottom: 0;
+    font-size: 0.95em;
+    font-family: monospace;
+    color: black;
+    background-color: white;
+    white-space: nowrap;	/* don't break any lines in the table cells */
+}
+TABLE.chart TD,
+TABLE.chart TH
+{
+    /* Background colours for individual cells don't work */
+    /* You have to set the colour for the whole table     */
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-left: 0;
+    border-top: 0;
+    border-right: gray 1px solid;    
+    border-bottom: gray 1px solid;
+    margin: 0;
+    text-align: left;
+    white-space: pre; /* No automatic linebreaking */
+}
+TABLE.chart TR.s TD, /* A row with class="s" marks the tart of a sectin in the table */
+TABLE.chart TR.s TH
+{
+    border-top: black 2px solid;  
+}
+TABLE.chart TD.a    /* an available time */
+{
+    background-color: #99FF99;
+    color: black;
+    text-align: center;
+}
+TABLE.chart TD.u    /* an unavailable time */
+{
+    background-color: #FF9999;
+    color: black;
+    text-align: center;
+}
+TABLE.chart TD.s    /* a supervision time */
+{
+    background-color: #FF6633;
+    color: black;
+    text-align: center;
+}
+
+
+/* The width is 50% and it's centred because the left margin is 25% */
+P.whitebox
+{
+    width: 50%;
+    border: black 1px solid;
+	padding: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 25%;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+	font-weight: bold;
+    text-align: center;
+}
+P.whitebox IMG
+{
+	margin: 1em;
+}
+
+TABLE.whitetable
+{
+    width: 85%;
+    border: black 1px solid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 6%;
+    margin-right: auto;
+    color: black;
+    background-color: white;
+}
+TABLE.whitetable TD,
+TABLE.whitetable TH
+{
+    margin: 0;
+    border: white 0.5em solid;
+    vertical-align: top;
+    text-align: left;
+}
+TABLE.whitetable TH { WIDTH: 50% }
+
+
+TABLE.spacer
+{
+    border:0;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: inline;
+}
+TABLE.spacer TD
+{
+    margin: 0;
+    vertical-align: top;
+}
+
+
+/* Don't use padding-bottom because it makes Netscape 4 go haywire */
+TABLE.contents
+{
+    border-left:   0;
+    border-right:  0;
+    border-top:    0;
+    border-bottom: 1em;
+}
+TABLE.contents TH, 
+TABLE.contents TD
+{
+    /* Could use this to put space between rows, 
+       but trying to have a transparent border doesn't work */
+    /* border-top: lavender 10px solid; */ 
+
+    vertical-align: top;
+    text-align: left;
+}
+TABLE.contents TH
+{
+    font-weight: bold;
+    background-color: #FFCCFF;
+    color: black;
+    /*background-image: url(metal.gif);*/  /* This URL is relative to the CSS file */
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+TABLE.contents TD
+{
+    padding-left: 1em;
+}
+
+DIV
+{
+	padding-left: 3em;
+	padding-right: 3em;
+}
+TABLE.header
+{
+	/* background-color: #DDBBFF; Old lavender colour*/
+	background: url('squares.svg') #5696f7;
+	background-repeat: repeat;
+	/* background-color: #5696f7; */
+	color: black;
+	width: 100%;
+	
+	/* background gradient */
+	/* background-image: url(http://www.tizag.com/pics/BannerTileBackground.gif); */
+	/* background-repeat: repeat-xy; */
+}
+TABLE.header TD 
+{
+	padding-top: 1em;
+}
+DIV.header
+{
+}
+DIV.header P
+{
+	clear:none;
+	margin:0;
+	padding:0;
+}
+DIV.header H1
+{
+ 	margin:0;
+	padding:0;
+	clear:none;
+}
+DIV.navbar
+{
+	/* border-top: 1px black solid;
+	   border-bottom: 1px black solid; */
+	border: 0;
+	color: blue;
+	margin: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	margin: 0;
+	background-color: #5696f7;
+	/* background-color: #609; */
+	/* background-image: url('navbar-purple-uk.jpg'); */
+	/* background-repeat: no-repeat; */
+	background-position: top right;	
+	clear: both;
+	vertical-align: middle;
+	
+	/* Originally I had this background line with solid colour and
+	URL in one, but on Chrome it leaves a 1px line of solid background
+	at the bottom, so now I've used two background lines, where the
+	second line overrides the first. */
+	/*background: #5696f7 url('navbar-shaded.svg') repeat-x;*/
+	background: #5696f7;
+	background: url('navbar-shaded.svg') repeat-x;
+	background-size: contain;
+}
+DIV.navbar A,
+DIV.navbar A:link,
+DIV.navbar A:visited,
+DIV.navbar A:active
+{
+	color: black;
+	background-color: transparent;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	height: 100%;
+	outline: none; /* no dotted outline on clicking */
+}
+DIV.navbar A:link:hover,
+DIV.navbar A:visited:hover
+{
+    color: blue;
+    background-color: #EEE;
+}
+DIV.navbar P
+{
+	margin: 0;
+	padding:0;
+}
+DIV.navbar #thisPage
+{
+	/* font-weight: bold; */
+	color: black;
+	background-color: white;
+}
+
+DIV.content
+{
+	margin-top: 1em;
+	margin-bottom: 2em;
+	/* background: url('bg-swoosh.svg') #fff;
+	background-size:100%; */
+	max-width: 50em;
+}
+DIV.columns
+{
+	margin-top: 1em;
+	margin-bottom: 2em;
+	padding-left: 3em;
+	padding-right: 3em;
+	float: left;
+}
+DIV.column
+{
+	float: left;
+	position: relative;
+	padding: 0 3em 1em 0; /* top right bottom left */
+	overflow:hidden;
+}
+DIV.footer
+{
+	font-size: small;
+    text-align: right;
+	color: #555;
+	clear: both;
+	border-top: 1px solid gray;
+	max-width: 100%;
+}
+DIV.footer P
+{
+    text-align: right;
+	max-width: 100%;
+}
+DIV.footer #left
+{
+	float:left;
+	padding:0;
+	margin:0;
+	border:0;
+}
+DIV.footer #center
+{
+	text-align: center;
+	clear: none;
+	padding:0;
+	margin:0;
+	border:0;
+}
+DIV.footer #right
+{
+	float:right;
+	padding:0;
+	margin:0;
+	border:0;
+}
+	
+
+/* These allow a title in the contents table     */
+/* to also be a link. It will turn blue when the */
+/* mouse goes over it.                           */
+/*                                               */
+TABLE.contents TH A,
+TABLE.contents TH A:link,
+TABLE.contents TH A:visited
+{
+  color: black;
+  background-color: transparent;
+}
+TABLE.contents TH A:hover
+{
+  color: blue;
+  background-color: transparent;
+}
+
+/* A 'message' table houses an important message that readers */
+/* must be alerted to.                                        */
+TABLE.message
+{
+  border: 3px red solid;
+  background-color: inherit;
+/*  background-color: white;*/
+  color: red;
+  font-weight: bold;
+  font-size: 1.3em;
+}
